@@ -41,5 +41,5 @@ class Emailer(threading.Thread):
             smtpObj.login(self.email, self.passwd)
             smtpObj.send_message(msg)
             smtpObj.quit()
-        except SMTPDataError:
+        except smtplib.SMTPDataError:
             print("Message not sent")
