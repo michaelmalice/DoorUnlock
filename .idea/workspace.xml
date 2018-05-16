@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37267c18-a4a7-4f70-917d-ff66bc4442bd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Requestor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Requestor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socketTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/socketTest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,20 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Requestor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Requestor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Requestor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="106" selection-start-line="13" selection-start-column="106" selection-end-line="13" selection-end-column="106" />
+            <state relative-caret-position="255">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socketTest.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="socketTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/socketTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="511">
+              <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -131,9 +131,9 @@
         <option value="$PROJECT_DIR$/webcamPyQTtest.py" />
         <option value="$PROJECT_DIR$/FaceCheckInTest2.py" />
         <option value="$PROJECT_DIR$/FaceCheckInTest.py" />
-        <option value="$PROJECT_DIR$/socketTest.py" />
         <option value="$PROJECT_DIR$/Emailer.py" />
         <option value="$PROJECT_DIR$/Requestor.py" />
+        <option value="$PROJECT_DIR$/socketTest.py" />
       </list>
     </option>
   </component>
@@ -771,16 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socketTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Emailer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -793,8 +783,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Requestor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="106" selection-start-line="13" selection-start-column="106" selection-end-line="13" selection-end-column="106" />
+        <state relative-caret-position="255">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socketTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
