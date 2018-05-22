@@ -71,7 +71,7 @@ def CreateSocket(q):
                 doorOpenedTime = None
                 print("Door closed")
         except KeyboardInterrupt:
-            print("Kayboard interrupt detected. Closing Socket.")
+            print("Keyboard interrupt detected. Closing Socket.")
             mySocket.close()
         except socket.timeout:
             pass

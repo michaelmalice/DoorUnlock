@@ -379,7 +379,8 @@ def run_camera(valid_output, graph, graph2):
 
     #entrant = 0
 
-    cv2.namedWindow(CV_WINDOW_NAME)
+    cv2.namedWindow(CV_WINDOW_NAME, cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty(CV_WINDOW_NAME, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
     found_match = 0
 
