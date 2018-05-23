@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="37267c18-a4a7-4f70-917d-ff66bc4442bd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceCheckInTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceCheckInTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socketTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/socketTest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +40,8 @@
       <file leaf-file-name="webcamPyQTtest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webcamPyQTtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+            <state relative-caret-position="960">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -54,8 +52,8 @@
       <file leaf-file-name="FaceCheckInTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FaceCheckInTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="393" column="47" lean-forward="true" selection-start-line="393" selection-start-column="47" selection-end-line="393" selection-end-column="47" />
+            <state relative-caret-position="-1860">
+              <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
               <folding>
                 <element signature="e#117#149#0" expanded="true" />
               </folding>
@@ -66,8 +64,8 @@
       <file leaf-file-name="Emailer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Emailer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
+            <state relative-caret-position="750">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -78,7 +76,7 @@
       <file leaf-file-name="Requestor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Requestor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="165">
               <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
@@ -87,8 +85,8 @@
       <file leaf-file-name="socketTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socketTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+            <state relative-caret-position="1050">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -99,8 +97,8 @@
       <file leaf-file-name="FaceCheckInTest2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FaceCheckInTest2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7350">
-              <caret line="507" selection-start-line="507" selection-end-line="507" />
+            <state relative-caret-position="7365">
+              <caret line="516" selection-start-line="516" selection-end-line="516" />
               <folding>
                 <element signature="e#117#149#0" expanded="true" />
               </folding>
@@ -140,10 +138,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="171" />
-    <option name="y" value="31" />
-    <option name="width" value="1147" />
-    <option name="height" value="815" />
+    <option name="x" value="292" />
+    <option name="y" value="24" />
+    <option name="width" value="1398" />
+    <option name="height" value="992" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -270,7 +268,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="171" y="31" width="1147" height="815" extended-state="0" />
+    <frame x="292" y="24" width="1398" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
@@ -294,21 +292,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19979508" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39959016" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -319,12 +317,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/FaceCheckInTest2.py</url>
-          <line>545</line>
+          <line>554</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/FaceCheckInTest2.py</url>
-          <line>361</line>
+          <line>362</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -375,13 +373,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py" />
     <entry file="file://$PROJECT_DIR$/socketTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -442,13 +434,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py" />
     <entry file="file://$PROJECT_DIR$/socketTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -489,13 +475,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py" />
     <entry file="file://$PROJECT_DIR$/webcamPyQTtest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -707,8 +687,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webcamPyQTtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+        <state relative-caret-position="960">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -736,17 +716,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/DoorUnlock/FaceCheckIn.py" />
     <entry file="file://$PROJECT_DIR$/FaceCheckInTest2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7350">
-          <caret line="507" selection-start-line="507" selection-end-line="507" />
+        <state relative-caret-position="7365">
+          <caret line="516" selection-start-line="516" selection-end-line="516" />
           <folding>
             <element signature="e#117#149#0" expanded="true" />
           </folding>
@@ -765,8 +739,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Emailer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
+        <state relative-caret-position="750">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
@@ -775,15 +749,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Requestor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="165">
           <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/socketTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        <state relative-caret-position="1050">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -792,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FaceCheckInTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="393" column="47" lean-forward="true" selection-start-line="393" selection-start-column="47" selection-end-line="393" selection-end-column="47" />
+        <state relative-caret-position="-1860">
+          <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
           <folding>
             <element signature="e#117#149#0" expanded="true" />
           </folding>
