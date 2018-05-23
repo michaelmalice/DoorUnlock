@@ -88,7 +88,6 @@ def run_inference(image_to_classify, facenet_graph, input_fifo, output_fifo):
 
     # Read the results from the queue
     output, user_obj = output_fifo.read_elem()
-    print("Read from movidius successful")
 
 
 
@@ -533,10 +532,25 @@ def main():
     ssd_mobilenet_graph = mvnc.Graph("graph_data")
 
     # Create input and output for face_graph
-    input_fifo, output_fifo = graph.allocate_with_fifos(device, graph_in_memory)
+    input_fifo, output_fifo = graph.allocate_with_fifos(device, graph_in_memory,
+                                                        input_fifo_type=mvnc.FifoType.HOST_WO,
+                                                        input_fifo_num_elem=2,
+                                                        input_fifo_data_type=mvnc.FifoDataType.FP16,
+                                                        output_fifo_type=mvnc.FifoType.HOST_RO,
+                                                        output_fifo_num_elem=2,
+                                                        output_fifo_data_type=mvnc.FifoDataType.FP16
+                                                        )
+
 
     #Create input and output for ssd_graph
-    input_fifo_ssd, output_fifo_ssd = ssd_mobilenet_graph.allocate_with_fifos(device, graph_data)
+    input_fifo_ssd, output_fifo_ssd = ssd_mobilenet_graph.allocate_with_fifos(device, graph_data,
+                                                                              input_fifo_type=mvnc.FifoType.HOST_WO,
+                                                                              input_fifo_num_elem=2,
+                                                                              input_fifo_data_type=mvnc.FifoDataType.FP16,
+                                                                              output_fifo_type=mvnc.FifoType.HOST_RO,
+                                                                              output_fifo_num_elem=2,
+                                                                              output_fifo_data_type=mvnc.FifoDataType.FP16
+                                                                              )
 
     valid_output = {}
 
