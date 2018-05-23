@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37267c18-a4a7-4f70-917d-ff66bc4442bd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/FaceCheckInTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceCheckInTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facenet_celeb_ncs.graph" beforeDir="false" afterPath="$PROJECT_DIR$/facenet_celeb_ncs.graph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph" beforeDir="false" afterPath="$PROJECT_DIR$/graph" afterDir="false" />
-    </list>
+    <list default="true" id="37267c18-a4a7-4f70-917d-ff66bc4442bd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +50,8 @@
       <file leaf-file-name="FaceCheckInTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FaceCheckInTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="122" column="101" selection-start-line="122" selection-start-column="101" selection-end-line="122" selection-end-column="101" />
+            <state relative-caret-position="435">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
               <folding>
                 <element signature="e#117#149#0" expanded="true" />
               </folding>
@@ -779,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FaceCheckInTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="122" column="101" selection-start-line="122" selection-start-column="101" selection-end-line="122" selection-end-column="101" />
+        <state relative-caret-position="435">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="e#117#149#0" expanded="true" />
           </folding>
