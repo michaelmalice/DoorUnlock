@@ -74,22 +74,24 @@ record = False
 #    and labels identifying the found objects within the image.
 # ssd_mobilenet_graph is the Graph object from the NCAPI which will
 #    be used to peform the inference.
-def run_inference(image_to_classify, facenet_graph):
+def run_inference(image_to_classify, facenet_graph, input_fifo, output_fifo):
 
     # get a resized version of the image that is the dimensions
     # SSD Mobile net expects
     resized_image = preprocess_image(image_to_classify)
 
+    # Create Tensor for the inference
+    tensor = resized_image.astype(numpy.float16)
 
-    # ***************************************************************
-    # Send the image to the NCS
-    # ***************************************************************
-    facenet_graph.LoadTensor(resized_image.astype(numpy.float16), None)
+    # Write the tensor to the input_fifo and queue an inference
+    facenet_graph.queue_inference_with_fifo_elem(input_fifo, output_fifo, tensor, 'user object')
 
-    # ***************************************************************
-    # Get the result from the NCS
-    # ***************************************************************
-    output, userobj = facenet_graph.GetResult()
+    # Read the results from the queue
+    output, user_obj = output_fifo.read_elem()
+    print("Read from movidius successful")
+
+
+
 
     return output
 
@@ -99,7 +101,7 @@ def run_inference(image_to_classify, facenet_graph):
     #    and labels identifying the found objects within the image.
     # ssd_mobilenet_graph is the Graph object from the NCAPI which will
     #    be used to peform the inference.
-def run_inference2(image_to_classify, ssd_mobilenet_graph):
+def run_inference2(image_to_classify, ssd_mobilenet_graph, input_fifo, output_fifo):
 
 
     # importing global variables
@@ -114,11 +116,15 @@ def run_inference2(image_to_classify, ssd_mobilenet_graph):
     # preprocess the image to meet nework expectations
     resized_image = preprocess_image2(image_to_classify)
 
-    # Send the image to the NCS as 16 bit floats
-    ssd_mobilenet_graph.LoadTensor(resized_image.astype(numpy.float16), None)
+    # Create Tensor for the inference
+    tensor = resized_image.astype(numpy.float16)
 
-    # Get the result from the NCS
-    output, userobj = ssd_mobilenet_graph.GetResult()
+    # Write the tensor to the input_fifo and queue an inference
+    ssd_mobilenet_graph.queue_inference_with_fifo_elem(input_fifo, output_fifo, tensor, 'user object')
+
+    # Read the results from the Queue
+    output, user_obj = output_fifo.read_elem()
+    print("Read from movidius successful")
 
     #   a.	First fp16 value holds the number of valid detections = num_valid.
     #   b.	The next 6 values are unused.
@@ -359,7 +365,7 @@ def handle_keys(raw_key):
 # graph is the ncsdk Graph object initialized with the facenet graph file
 #   which we will run the inference on.
 # returns None
-def run_camera(valid_output, graph, graph2):
+def run_camera(valid_output, graph, graph2, input_fifo_face, output_fifo_face, input_fifo_ssd, output_fifo_ssd):
     camera_device = cv2.VideoCapture(CAMERA_INDEX)
     camera_device.set(cv2.CAP_PROP_FRAME_WIDTH, REQUEST_CAMERA_WIDTH)
     camera_device.set(cv2.CAP_PROP_FRAME_HEIGHT, REQUEST_CAMERA_HEIGHT)
@@ -415,11 +421,12 @@ def run_camera(valid_output, graph, graph2):
                     out.release()
                     startRecord = True
             record = False
-            match_count = CheckFace(valid_output,vid_image, graph, CV_WINDOW_NAME, match_count)
+            match_count = CheckFace(valid_output,vid_image, graph, CV_WINDOW_NAME,
+                                    match_count, input_fifo_face, output_fifo_face)
 
         elif (doorOpen):
             match_count = 0
-            run_inference2(vid_image, graph2)
+            run_inference2(vid_image, graph2, input_fifo_ssd, output_fifo_ssd)
 
 
         # check if the window is visible, this means the user hasn't closed
@@ -445,12 +452,12 @@ def run_camera(valid_output, graph, graph2):
     camera_device.release()
 
 
-def CheckFace(valid_output, vid_image, graph, frame_name, match_count):
+def CheckFace(valid_output, vid_image, graph, frame_name, match_count, input_fifo, output_fifo):
 
 
     # run a single inference on the image and overwrite the
     # boxes and labels
-    test_output = run_inference(vid_image, graph)
+    test_output = run_inference(vid_image, graph, input_fifo, output_fifo)
 
     matched_face = face_match(valid_output, test_output)
     if (matched_face != False):
@@ -491,7 +498,7 @@ def main():
     ENTRANT = 0
     # Get a list of ALL the sticks that are plugged in
     # we need at least one
-    devices = mvnc.EnumerateDevices()
+    devices = mvnc.enumerate_devices()
     if len(devices) == 0:
         print('No NCS devices found')
         quit()
@@ -500,13 +507,13 @@ def main():
     device = mvnc.Device(devices[0])
 
     #Pick the second stick to run the Person Detector
-    device2 = mvnc.Device(devices[1])
+    #device2 = mvnc.Device(devices[1])
 
     # Open the first NCS
-    device.OpenDevice()
+    device.open()
 
     # Open the second NCS
-    device2.OpenDevice()
+    #device2.OpenDevice()
 
     # The graph file that was created with the ncsdk compiler
     graph_file_name = GRAPH_FILENAME
@@ -520,10 +527,16 @@ def main():
         graph_data = f.read()
 
     # create the NCAPI graph instance from the memory buffer containing the graph file.
-    graph = device.AllocateGraph(graph_in_memory)
+    graph = mvnc.Graph('graph_in_memory')
 
     # allocate the Graph instance from NCAPI by passing the memory buffer
-    ssd_mobilenet_graph = device2.AllocateGraph(graph_data)
+    ssd_mobilenet_graph = mvnc.Graph("graph_data")
+
+    # Create input and output for face_graph
+    input_fifo, output_fifo = graph.allocate_with_fifos(device, graph_in_memory)
+
+    #Create input and output for ssd_graph
+    input_fifo_ssd, output_fifo_ssd = ssd_mobilenet_graph.allocate_with_fifos(device, graph_data)
 
     valid_output = {}
 
@@ -532,20 +545,25 @@ def main():
             if file[-4:] == ".jpg" or file[-4:] == ".png":
                 validated_image_filename = VALIDATED_IMAGES_DIR + file
                 validated_image = cv2.imread(validated_image_filename)
-                valid_output[file[:-4]] = run_inference(validated_image, graph)
+                valid_output[file[:-4]] = run_inference(validated_image, graph, input_fifo, output_fifo)
 
     #http_thread = ThreadedHTTP(('', 8686), ReedHandler)
 
 
 
-    run_camera(valid_output, graph,ssd_mobilenet_graph)
+    run_camera(valid_output, graph, ssd_mobilenet_graph, input_fifo, output_fifo, input_fifo_ssd, output_fifo_ssd)
 
 
     # Clean up the graph and the device
-    graph.DeallocateGraph()
-    ssd_mobilenet_graph.DeallocateGraph()
-    device.CloseDevice()
-    device2.CloseDevice()
+    input_fifo.destroy()
+    input_fifo_ssd.destroy()
+    output_fifo.destroy()
+    output_fifo_ssd.destroy()
+    graph.destroy()
+    ssd_mobilenet_graph.destroy()
+    device.close()
+    device.destroy()
+    #device2.CloseDevice()
 
 
 

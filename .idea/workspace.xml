@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="37267c18-a4a7-4f70-917d-ff66bc4442bd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/FaceCheckInTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceCheckInTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facenet_celeb_ncs.graph" beforeDir="false" afterPath="$PROJECT_DIR$/facenet_celeb_ncs.graph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph" beforeDir="false" afterPath="$PROJECT_DIR$/graph" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,8 +54,8 @@
       <file leaf-file-name="FaceCheckInTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FaceCheckInTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="555">
+              <caret line="122" column="101" selection-start-line="122" selection-start-column="101" selection-end-line="122" selection-end-column="101" />
               <folding>
                 <element signature="e#117#149#0" expanded="true" />
               </folding>
@@ -118,6 +120,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>email</find>
+      <find>queue_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,8 +141,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="292" />
-    <option name="y" value="24" />
+    <option name="x" value="976" />
+    <option name="y" value="44" />
     <option name="width" value="1398" />
     <option name="height" value="992" />
   </component>
@@ -268,7 +271,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="292" y="24" width="1398" height="992" extended-state="0" />
+    <frame x="976" y="44" width="1398" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
@@ -776,8 +779,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FaceCheckInTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="555">
+          <caret line="122" column="101" selection-start-line="122" selection-start-column="101" selection-end-line="122" selection-end-column="101" />
           <folding>
             <element signature="e#117#149#0" expanded="true" />
           </folding>
