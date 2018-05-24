@@ -112,7 +112,7 @@ def run_inference2(image_to_classify, ssd_mobilenet_graph, input_fifo, output_fi
     global out
     global record
 
-    # preprocess the image to meet nework expectations
+    # preprocess the image to meet network expectations
     resized_image = preprocess_image2(image_to_classify)
 
     # Create Tensor for the inference
@@ -123,7 +123,6 @@ def run_inference2(image_to_classify, ssd_mobilenet_graph, input_fifo, output_fi
 
     # Read the results from the Queue
     output, user_obj = output_fifo.read_elem()
-    print("Read from movidius successful")
 
     #   a.	First fp16 value holds the number of valid detections = num_valid.
     #   b.	The next 6 values are unused.
